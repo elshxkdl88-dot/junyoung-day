@@ -82,3 +82,26 @@ index=0;
 showPhoto();
 
 }
+function createBalloon(){
+
+const b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML="🎈";
+
+b.style.left=Math.random()*100+"%";
+
+b.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.getElementById("balloons").appendChild(b);
+
+setTimeout(()=>{
+
+b.remove();
+
+},11000);
+
+}
+
+setInterval(createBalloon,600);
